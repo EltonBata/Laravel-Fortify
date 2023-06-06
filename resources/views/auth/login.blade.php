@@ -7,6 +7,10 @@
     <h3 class="text-center">Login</h3>
     <div class="">
 
+            @if (session('status'))
+                {{ session('status') }}
+            @endif
+
         <form action="{{ route('login') }}" method="POST">
             @csrf
             <div class="">
