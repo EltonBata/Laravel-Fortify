@@ -2,31 +2,31 @@
 @section('title', 'Login')
 @section('content')
 
-<div class="">
-
-    <h3 class="text-center">Login</h3>
     <div class="">
+
+        <h3 class="text-center">Login</h3>
+        <div class="">
 
             @if (session('status'))
                 {{ session('status') }}
             @endif
 
-        <form action="{{ route('login') }}" method="POST">
-            @csrf
-            <div class="">
-                <label for="" class="">Email:</label>
-                <input type="email" name="email" class="" required>
+            <form action="{{ route('login') }}" method="POST">
+                @csrf
+                <div class="">
+                    <label for="" class="">Email:</label>
+                    <input type="email" name="email" class="" required>
 
                     @error('email')
                         <span>
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-            </div>
+                </div>
 
-            <div class="">
-                <label for="" class="">Password</label>
-                <input type="password" name="password" class="" required>
+                <div class="">
+                    <label for="" class="">Password</label>
+                    <input type="password" name="password" class="" required>
 
 
                     @error('password')
@@ -34,15 +34,15 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-            </div>
+                </div>
 
-            <div>
-                <button type="submit" class="btn">Logon</button>
-            </div>
-        </form>
+                <div>
+                    <button type="submit" class="btn">Logon</button>
+                </div>
+            </form>
+
+        </div>
 
     </div>
-
-</div>
 
 @endsection
